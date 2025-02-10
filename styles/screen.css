@@ -65,6 +65,11 @@ img.about {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
 .planet-avatar {
     width: 80px;
     height: 80px;
