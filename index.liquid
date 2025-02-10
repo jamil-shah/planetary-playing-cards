@@ -2,6 +2,11 @@
 layout: layout.liquid
 title: "Planetary Playing Cards"
 
+sun:
+    name: "Sun"
+    color: "white"
+    type: "G2V"
+
 planets:
     - name: "Mercury"
       color: "gray"
@@ -31,7 +36,15 @@ planets:
 ---
 
 <div class="grid">
-{% for planets in planets %}
-    {% include 'card.liquid' %}
-{% endfor %}
+    <div class="sun-card">
+        <div class="planet-avatar sun-avatar"></div>
+        <h2 class="planet-name">Sun</h2>
+        <p class="planet-au">Type G2V</p>
+    </div>
+
+    <div class="planets-container">
+        {% for planet in planets %}
+            {% include 'card.liquid', planet: planet %}
+        {% endfor %}
+    </div>
 </div>

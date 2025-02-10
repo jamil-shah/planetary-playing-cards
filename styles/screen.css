@@ -6,58 +6,90 @@ body {
     text-align: center;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
+.planets-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
     padding: 20px;
+}
+
+.planet-card {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
     color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.planet-name {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-img.about {
-    opacity: 0.5;
+.planet-au {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(150px, 1fr));
+    grid-template-columns: 1.5fr 3fr; /* Sun takes less space, planets take more */
     gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    align-items: start;
+}
+
+.sun-card {
+    grid-column: 1; 
+    grid-row: span 2; 
+    width: 250px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    color: #EAE8FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.sun-avatar {
+    width: 400px;
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
     background: #2D3142;
     padding: 15px;
     border-radius: 10px;
@@ -65,14 +97,18 @@ img.about {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.planet-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .planet-avatar {
     width: 80px;
-    height: 80px;
+    aspect-ratio: 1 / 1;
     margin: 10px auto;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
