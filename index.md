@@ -3,21 +3,21 @@ layout: layout.liquid
 title: "Planetary Playing Cards"
 
 planets:
-    -name: "Mercury"
+    - name: "Mercury"
     
-    -name: "Venus"
+    - name: "Venus"
 
-    -name: "Earth"
+    - name: "Earth"
 
-    -name: "Mars"
+    - name: "Mars"
 
-    -name: "Jupiter"
+    - name: "Jupiter"
 
-    -name: "Saturn"
+    - name: "Saturn"
 
-    -name: "Uranus"
+    - name: "Uranus"
 
-    -name: "Neptune"
+    - name: "Neptune"
 
 ---
 
