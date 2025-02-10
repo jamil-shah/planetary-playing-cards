@@ -1,0 +1,28 @@
+---
+layout: layout.liquid
+title: "Planetary Playing Cards"
+
+planets:
+    -name: "Mercury"
+    
+    -name: "Venus"
+
+    -name: "Earth"
+
+    -name: "Mars"
+
+    -name: "Jupiter"
+
+    -name: "Saturn"
+
+    -name: "Uranus"
+
+    -name: "Neptune"
+
+---
+
+<div class="grid">
+{% for planets in planets %}
+    {% include 'card.liquid' %}
+{% endfor %}
+</div>
