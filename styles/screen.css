@@ -48,3 +48,20 @@ h1 strong {
 img.about {
     opacity: 0.5;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: #2D3142;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
