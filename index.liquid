@@ -1,7 +1,28 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: "Planetary Playing Cards"
+
+planets:
+    - name: "Mercury"
+    
+    - name: "Venus"
+
+    - name: "Earth"
+
+    - name: "Mars"
+
+    - name: "Jupiter"
+
+    - name: "Saturn"
+
+    - name: "Uranus"
+
+    - name: "Neptune"
+
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div class="grid">
+{% for planets in planets %}
+    {% include 'card.liquid' %}
+{% endfor %}
+</div>
